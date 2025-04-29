@@ -5,6 +5,9 @@ const cors = require('cors');
 const app = express();
 app.use(cors());
 app.use(express.json());
+app.use(cors({ 
+  origin: ['https://trackmyspeed.com', 'https://vehicle-speed-tracker.vercel.app'] 
+}));
 
 // Connect to MongoDB
 mongoose.connect('mongodb+srv://mravichandranthevar:4jOaZxAPT5gPpXaj@vehicletracker.hfd7frk.mongodb.net/?retryWrites=true&w=majority&appName=VehicleTracker');
